@@ -29,44 +29,47 @@
 
                     <div class="form-group">
                         <label for="firstName">FIRST NAME<span>*</span></label>
-                        <input type="text" id="firstName" name="firstName"  placeholder="Ollie" required>
+                        <input type="text" id="firstName" name="firstName"  placeholder="Ollie">
                         <small class="error-message">Please enter your first name</small>
                     </div>
 
                     <div class="form-group">
                         <label for="lastName">LAST NAME<span>*</span></label>
-                        <input type="text" id="lastName" name="lastName" placeholder="Hart" required>
+                        <input type="text" id="lastName" name="lastName" placeholder="Hart">
                         <small class="error-message">Please enter your last name</small>
                     </div>
 
                     <div class="form-group">
                         <label for="email">EMAIL<span>*</span></label>
-                        <input type="email" id="email" name="email" placeholder="OllieHart@email.com" required>
+                        <input type="email" id="email" name="email" placeholder="OllieHart@email.com">
                         <small class="error-message">Please enter your email</small>
                     </div>
 
                     <div class="form-group">
                         <label for="phoneNumber">PHONE NUMBER</label>
-                        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="07123456789">
-                        <small class="error-message">Please enter your phone number</small>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="07123456789" pattern="[0-9]{11}">
+                        <small class="error-message">This phone number is not the right length!</small>
                     </div>
 
                     <div class="form-group">
-                        <label for="password">PASSWORD<span>*</span></label required>
-                        <input type="password" id="password" name="password" required>
+                        <label for="password">PASSWORD<span>*</span></label>
+                        <input type="password" id="password" name="password">
                         <small class="error-message">Please choose a password</small>
                     </div>
 
                     <div class="form-group">
-                        <label for="confirmPassword">CONFIRM PASSWORD<span>*</span></label required>
-                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <label for="confirmPassword">CONFIRM PASSWORD<span>*</span></label>
+                        <input type="password" id="confirmPassword" name="confirmPassword">
                         <small class="error-message">This does not match your password</small>
                     </div>
-
                 </form>
             </div>
 
+            <button type="submit" form="signupform">Create account</button>
+
+            <p id="accountLogin">Already have an account? <a href="">Log in</a></p>
         </div>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
