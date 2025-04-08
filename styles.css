@@ -9,16 +9,39 @@
     height: 100%;
     font-family: sans-serif;
   }
-  
-h1 {
-    font-size: 5rem;
-}
 
 @font-face {
     font-family: 'Norse-Bold';
     src: url('./fonts/Norse-Bold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('./fonts/montserrat-regular.woff2') format('woff2'),
+         url('./fonts/montserrat-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: #596D48;
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-family: 'montserratregular';
 }
 
 #main {
@@ -31,7 +54,7 @@ h1 {
 #title-section {
     background-image: url('assets/halie-west-25xggax4bSA-unsplash.jpg');
     background-size: cover;
-    min-width: 300px;
+    min-width: 400px;
     width: 40%;
     max-width: 500px;
     flex-shrink: 1;
@@ -54,3 +77,74 @@ h1 {
 #odin-image {
     height: 100%;
 }
+
+#content-section {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: left;
+}
+
+#form-section {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* Space between fields */
+    max-width: 500px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form input field styling */
+input {
+    border: 1px solid rgb(235, 235, 235);
+    height: 2rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding-left: 10px;
+    font-family: inherit;
+  }
+  
+  input:hover, input:valid:not(:placeholder-shown) {
+    border-color: #596D48;
+  }
+
+  input:focus-within {
+    border: 2px solid #596D48;
+  }
+
+  input::placeholder {
+    color: rgb(214, 214, 214);
+  }
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 4px;
+    display: none; /* hide until needed */
+  }
+
+  label {
+    font-family: 'montserratregular';
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 5px;
+    color: rgb(63, 78, 35);
+  }
+
+  label span {
+    color: red;
+  }
